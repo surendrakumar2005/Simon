@@ -69,7 +69,9 @@ function newgame(){
 $('h1').text('Level '+level);    
     var ind=Math.floor(Math.random()*3)+1;
 com.push(lis[ind]);
+    
 $('#'+lis[ind]).addClass('pressed');
+    new Audio("./sounds/"+lis[ind]+'.mp3').play();
 setTimeout(function(){
     $('#'+lis[ind]).removeClass('pressed');
 },100);
